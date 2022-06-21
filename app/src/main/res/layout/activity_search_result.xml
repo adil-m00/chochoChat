@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    tools:context="com.chochoChat.SearchResult">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/search_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/five_question_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="350dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_search_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Respondent 1"
+            android:textStyle="bold"
+            android:id="@+id/respondant1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/peterImage"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/respondant1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/avatar8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peter"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_toRightOf="@+id/peterImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_75sdp"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="350dp"
+        android:layout_height="175dp"
+        android:background="@drawable/bg_search_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Respondent 2"
+            android:textStyle="bold"
+            android:id="@+id/respondant2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/peterImag2"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/respondant2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/avatar5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anna"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_toRightOf="@+id/peterImag2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_75sdp"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="350dp"
+        android:layout_height="175dp"
+        android:background="@drawable/bg_search_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+
+
+        <TextView
+            android:id="@+id/respondant3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="Respondent 1"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/peterImage3"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/respondant3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/avatar6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_75sdp"
+            android:layout_toRightOf="@+id/peterImage3"
+            android:text="Sarah" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:src="@drawable/ask_ques_btn"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:id="@+id/askQuestionsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout5" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

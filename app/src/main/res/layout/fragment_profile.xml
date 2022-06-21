@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/app_bg"
+    tools:context="com.chochoChat.Fragment.ProfileFragment">
+
+
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_19sdp"
+        android:id="@+id/settingIcon"
+        android:src="@drawable/settings_icon"/>
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_below="@+id/settingIcon"
+        android:fillViewport="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:src="@drawable/avatar2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="John Doe"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_16sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:text="DOB: 20 March, 2021-Male"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_12sdp"/>
+
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_marginTop="@dimen/_10sdp"
+           app:cardCornerRadius="@dimen/_10sdp"
+           android:layout_marginRight="@dimen/_5sdp"
+           android:layout_marginLeft="@dimen/_5sdp"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:layout_width="match_parent"
+               android:scaleType="centerCrop"
+               android:layout_height="@dimen/_150sdp"
+               android:src="@drawable/person"/>
+
+       </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@drawable/info_bg1"
+            android:layout_height="@dimen/_40sdp">
+
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/location"
+                android:src="@drawable/loc"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/location"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:text="Location here, City, Country"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/info_bg1"
+            android:layout_height="@dimen/_40sdp">
+
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/education"
+                android:src="@drawable/education"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/education"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:text="High School"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/info_bg1"
+            android:layout_height="@dimen/_40sdp">
+
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/looking"
+                android:src="@drawable/looking_for"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/looking"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:text="Looking for long-term relationship"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/info_bg1"
+            android:layout_height="@dimen/_40sdp">
+
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/alcohol"
+                android:src="@drawable/alcohol"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/alcohol"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:text="Looking for long-term relationship"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/info_bg1"
+            android:layout_height="@dimen/_40sdp">
+
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/smoke"
+                android:src="@drawable/smoke"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/smoke"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:text="Sometimes"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/info_bg2"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_height="@dimen/_85sdp">
+
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:id="@+id/abouts"
+                android:src="@drawable/education"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/abouts"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:id="@+id/about"
+                android:text="About"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/abouts"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/about"
+                android:text="Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "/>
+        </RelativeLayout>
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_45sdp"
+            android:src="@drawable/edit_profile_btn"
+            android:id="@+id/editProfileBtn"/>
+
+
+    </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

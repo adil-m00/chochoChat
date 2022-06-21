@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/senderProfile"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:src="@drawable/avatar2"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msg_bubble1"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_toRightOf="@id/senderProfile"
+        android:id="@+id/texts1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/_18sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum dolor sit amet, Consetetur sadipscing elitr, sed diam nonumy"/>
+
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/receiverProfile"
+        android:layout_below="@+id/texts1"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/avatar4"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msg_bubble2"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_below="@+id/texts1"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_toLeftOf="@+id/receiverProfile"
+        android:id="@+id/texts">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_18sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum dolor sit amet, Consetetur sadipscing elitr, sed diam nonumy r sadipscing elitr, sed diam nonumy"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

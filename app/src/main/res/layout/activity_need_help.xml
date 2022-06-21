@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    tools:context="com.chochoChat.NeedHelp">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/i_need_help"
+        android:layout_centerHorizontal="true"/>
+
+
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:src="@drawable/back"
+        android:id="@+id/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/help_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/back"/>
+
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:src="@drawable/need_help_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitStart"
+        android:layout_below="@+id/imageView24"/>
+
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:background="@drawable/tf_bg"
+        android:hint="Write help subject here?"
+        android:textSize="12dp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_below="@+id/imageView25"/>
+
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:scaleType="fitStart"
+        android:src="@drawable/description_text"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_below="@+id/editText3"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        android:background="@drawable/bg_need_hel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/descriptionText"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="top"
+        android:hint="Give Description here"
+        android:paddingTop="@dimen/_7sdp"
+        android:textSize="14dp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_below="@+id/imageView26"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@+id/descriptionText"
+        android:id="@+id/needHelp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/send_btn_need"/>
+</RelativeLayout>

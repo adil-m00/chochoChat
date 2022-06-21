@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/chats_list_bg"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_height="@dimen/_65sdp">
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileLayout"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="@dimen/_43sdp"
+            android:id="@+id/image1"
+            android:layout_height="@dimen/_43sdp"
+            android:src="@drawable/avatar8"/>
+
+        <ImageView
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:src="@drawable/green"/>
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alexa"
+        android:id="@+id/names"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_toRightOf="@+id/profileLayout"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alexa"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_below="@+id/names"
+        android:layout_toRightOf="@+id/profileLayout"
+        android:layout_marginLeft="@dimen/_10sdp"/>
+
+
+
+    <TextView
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:background="@drawable/red"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:text="1"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/removeLayout"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:id="@+id/removeLayout"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/remove_icon"
+            android:id="@+id/removeIcon"
+            android:layout_toRightOf="@+id/equals"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
