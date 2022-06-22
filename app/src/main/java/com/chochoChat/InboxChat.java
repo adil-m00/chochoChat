@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 
-import com.randomchat.R;
 
 public class InboxChat extends AppCompatActivity {
 

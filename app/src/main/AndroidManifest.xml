@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.randomchat">
+    package="com.chochoChat">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -14,47 +14,80 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RandomChat"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.chochoChat.Settings"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name="com.chochoChat.PrivacyPolicy"
+        <activity android:name=".Settings"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.TermsAndConditions"
+        <activity android:name=".PrivacyPolicy"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.SubscriptionPlan"
+        <activity android:name=".TermsAndConditions"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.NeedHelp"
+        <activity android:name=".SubscriptionPlan"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.EditProfile"
+        <activity android:name=".NeedHelp"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.InboxChat"
+        <activity android:name=".EditProfile"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.SearchResult"
+        <activity android:name=".InboxChat"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.ChooserSearch"
+        <activity android:name=".SearchResult"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.CompleteProfile"
+        <activity android:name=".ChooserSearch"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.NewPassword"
+        <activity android:name=".CompleteProfile"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.VerificationCode"
+        <activity android:name=".NewPassword"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.ForgotPassword"
+        <activity android:name=".VerificationCode"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.LoginScreen"
+        <activity android:name=".ForgotPassword"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.SignUpScreen"
+        <activity android:name=".LoginScreen"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.LoginSignup"
+        <activity android:name=".SignUpScreen"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.MainActivity"
+        <activity android:name=".LoginSignup"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.chochoChat.SplashScreen"
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SplashScreen"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/fb_client_tokens" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider456520796475919"
+            android:exported="true" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
         </activity>
     </application>
 

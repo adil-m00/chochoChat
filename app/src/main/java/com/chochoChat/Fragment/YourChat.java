@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.chochoChat.Adapter.AvatarModal;
-import com.randomchat.R;
+import com.chochoChat.R;
 
 import java.util.ArrayList;
 

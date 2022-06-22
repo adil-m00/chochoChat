@@ -12,9 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.chochoChat.R;
 import com.google.android.material.tabs.TabLayout;
 import com.chochoChat.Adapter.ViewPagerAdapter;
-import com.randomchat.R;
 import com.chochoChat.SplashScreen;
 
 

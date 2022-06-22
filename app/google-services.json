@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "196771464437",
+    "project_id": "chochochat-465c9",
+    "storage_bucket": "chochochat-465c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196771464437:android:d5abc5b3bceb0fa4fc71bc",
+        "android_client_info": {
+          "package_name": "com.chochoChat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196771464437-oqmr2muqg23eh8iq5392vrtapth0p41v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkzE_vkvlVoTFLP82PqnZOUtOq7zRZxIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196771464437-oqmr2muqg23eh8iq5392vrtapth0p41v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

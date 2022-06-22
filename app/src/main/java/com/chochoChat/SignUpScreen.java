@@ -2,6 +2,7 @@ package com.chochoChat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
@@ -10,7 +11,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.randomchat.R;
+import com.facebook.CallbackManager;
+import com.facebook.login.widget.LoginButton;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+
 
 public class SignUpScreen extends AppCompatActivity {
 
@@ -18,6 +24,26 @@ public class SignUpScreen extends AppCompatActivity {
 
     private EditText passwordTexts,confirmText;
     private ImageView passwordEye,confirEye;
+
+    private FirebaseAuth firebaseAuth;
+    private DatabaseReference databaseReference;
+    private EditText email,password;
+    private ImageView login;
+    private ProgressDialog progressDialog;
+    String fcmToken;
+
+
+    GoogleSignInClient mGoogleSignInClient;
+    private static final String EMAIL = "email";
+    private final int RC_SIGN_IN  =123;
+    private FirebaseAuth mAuth;
+
+
+
+    //    facebook
+    private LoginButton loginButton;
+    private CallbackManager mCallbackManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

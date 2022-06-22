@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import com.mukesh.OnOtpCompletionListener;
 import com.mukesh.OtpView;
-import com.randomchat.R;
 
 
 public class VerificationCode extends AppCompatActivity  implements View.OnClickListener,

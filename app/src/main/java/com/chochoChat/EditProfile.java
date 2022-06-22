@@ -15,7 +15,7 @@ import android.widget.Spinner;
 
 import com.nabinbhandari.android.permissions.PermissionHandler;
 import com.nabinbhandari.android.permissions.Permissions;
-import com.randomchat.R;
+
 
 import java.util.ArrayList;
 

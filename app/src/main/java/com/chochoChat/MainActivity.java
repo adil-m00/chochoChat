@@ -16,7 +16,6 @@ import android.widget.ImageView;
 import com.chochoChat.Fragment.ChatFragment;
 import com.chochoChat.Fragment.HomeFragment;
 import com.chochoChat.Fragment.ProfileFragment;
-import com.randomchat.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -10,8 +10,10 @@
         <entry key="app/src/main/res/layout/activity_edit_profile.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_free_plan.xml" value="0.10260416666666666" />
         <entry key="app/src/main/res/layout/activity_inbox_chat.xml" value="0.10260416666666666" />
+        <entry key="app/src/main/res/layout/activity_login_signup.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_need_help.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_search_screen.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_sign_up_screen.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_terms_and_conditions.xml" value="0.19610507246376813" />
       </map>
     </option>

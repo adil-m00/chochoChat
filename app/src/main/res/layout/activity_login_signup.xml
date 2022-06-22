@@ -37,10 +37,15 @@
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/app_logo" />
 
-            <ImageView
+            <TextView
                 android:id="@+id/random_text"
+                android:text="Chat App"
                 android:layout_width="@dimen/_200sdp"
-                android:layout_height="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"
+                android:gravity="center"
                 android:layout_below="@+id/logo"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/_10sdp"
@@ -50,25 +55,18 @@
                 android:id="@+id/chat_icon"
                 android:layout_width="@dimen/_180sdp"
                 android:layout_height="@dimen/_180sdp"
+                android:padding="@dimen/_20sdp"
                 android:layout_below="@+id/random_text"
+                app:tint="@color/purple_700"
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/chat_icon" />
 
-            <TextView
-                android:id="@+id/ipsumText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/chat_icon"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="Lorem ipsum dolor sit amet, consetetur \n sadipscing alitr, sed."
-                android:textColor="@color/black" />
 
             <ImageView
                 android:id="@+id/purple"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_5sdp"
-                android:layout_below="@+id/ipsumText"
+                android:layout_below="@+id/chat_icon"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:src="@drawable/purple_line" />
@@ -77,7 +75,7 @@
                 android:id="@+id/dote1"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_5sdp"
-                android:layout_below="@id/ipsumText"
+                android:layout_below="@id/chat_icon"
                 android:layout_marginLeft="@dimen/_7sdp"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_toRightOf="@+id/purple"
@@ -87,7 +85,7 @@
                 android:id="@+id/dote2"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_5sdp"
-                android:layout_below="@id/ipsumText"
+                android:layout_below="@id/chat_icon"
                 android:layout_marginLeft="@dimen/_7sdp"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_toRightOf="@+id/dote1"

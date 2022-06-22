@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.chochoChat.EditProfile;
-import com.randomchat.R;
+import com.chochoChat.R;
 import com.chochoChat.Settings;
 
 public class ProfileFragment extends Fragment {

@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.randomchat.R;
+import com.chochoChat.R;
 
 public class SettingFragment extends Fragment {
 

@@ -6,4 +6,9 @@
     <string name="privacyPolicy"><u>Privacy Policy</u></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="facebook_app_id">456520796475919</string>
+    <string name="fb_login_protocol_scheme">fb456520796475919</string>
+    <string name="fb_client_tokens">8ca90e6bab0980dd3b36445fbc89b562</string>
+
 </resources>

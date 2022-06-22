@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.randomchat.R;
 
 public class NewPassword extends AppCompatActivity {
 

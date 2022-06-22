@@ -14,9 +14,8 @@ import android.widget.ImageView;
 
 import com.chochoChat.ChooserSearch;
 import com.chochoChat.MainActivity;
-import com.randomchat.R;
 import com.chochoChat.SplashScreen;
-
+import com.chochoChat.R;
 public class HomeFragment extends Fragment {
 
     public HomeFragment() {

@@ -16,7 +16,7 @@ import android.widget.ImageView;
 
 import com.chochoChat.Adapter.AvatarModal;
 import com.chochoChat.InboxChat;
-import com.randomchat.R;
+import com.chochoChat.R;
 
 import java.util.ArrayList;
 

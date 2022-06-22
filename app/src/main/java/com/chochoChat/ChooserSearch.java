@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.randomchat.R;
 
 public class ChooserSearch extends AppCompatActivity {
 
