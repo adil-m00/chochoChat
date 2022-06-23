@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
@@ -23,6 +24,7 @@ public class CompleteProfile extends AppCompatActivity {
 
 
     private Spinner gender,country,city,education,smoke,alcohol,lookingFor;
+    private EditText names,abouts;
 
     private ArrayList<String> genderLabel = new ArrayList<>();
     private ArrayList<String> countryLabel = new ArrayList<>();
@@ -53,6 +55,8 @@ public class CompleteProfile extends AppCompatActivity {
         smoke = findViewById(R.id.smokeSpinner);
         alcohol = findViewById(R.id.alcoholSpinner);
         lookingFor = findViewById(R.id.lookingFor);
+        names = findViewById(R.id.names);
+        abouts = findViewById(R.id.abouts);
 
 
 
@@ -80,6 +84,12 @@ public class CompleteProfile extends AppCompatActivity {
 
 
 
+        findViewById(R.id.saveBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
 

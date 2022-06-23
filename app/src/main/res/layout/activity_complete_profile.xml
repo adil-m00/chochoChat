@@ -103,16 +103,19 @@
                 android:layout_height="@dimen/_35sdp"
                 android:background="@drawable/tf"
                 android:paddingLeft="@dimen/_10sdp"
+                android:id="@+id/names"
                 android:hint="Name"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_8sdp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
+                android:gravity="center"
+                android:textColor="@color/black"
                 android:background="@drawable/tf"
                 android:paddingLeft="@dimen/_10sdp"
-                android:hint="Date of Birth"
+                android:text="Date of Birth"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_8sdp"/>
 
@@ -121,6 +124,7 @@
                 android:layout_height="@dimen/_75sdp"
                 android:background="@drawable/tf_1"
                 android:gravity="top"
+                android:id="@+id/abouts"
                 android:hint="About"
                 android:paddingLeft="@dimen/_10sdp"
                 android:textSize="@dimen/_12sdp"
