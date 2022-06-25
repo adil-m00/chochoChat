@@ -57,7 +57,7 @@ public class SignUpScreen extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
-    private EditText email,password,userName;
+    private EditText email,userName;
     private ImageView login;
     private ProgressDialog progressDialog;
     String fcmToken;
@@ -95,7 +95,7 @@ public class SignUpScreen extends AppCompatActivity {
             public void onClick(View v) {
                 String UserName = userName.getText().toString();
                 String Email = email.getText().toString();
-                String Password = password.getText().toString();
+                String Password = passwordTexts.getText().toString();
                 String ConfirmPassword = confirmText.getText().toString();
                 if(UserName.isEmpty() || Email.isEmpty() || Password.isEmpty() || ConfirmPassword.isEmpty())
                 {
@@ -189,7 +189,7 @@ public class SignUpScreen extends AppCompatActivity {
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
-        mGoogleSignInClient = GoogleSignIn.getClient(LoginScreen.this, gso);
+        mGoogleSignInClient = GoogleSignIn.getClient(SignUpScreen.this, gso);
 
 
 
@@ -382,23 +382,38 @@ public class SignUpScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String userId = mAuth.getCurrentUser().getUid().toString();
-                HashMap<String,Object> hashMap = new HashMap<>();
-                hashMap.put("FCM",fcmToken);
-                hashMap.put("Email",email);
-                hashMap.put("type","social");
-                hashMap.put("userName",profileUrl);
-                hashMap.put("Name",Name);
+                if(snapshot.child(userId).child("About").exists())
+                {
 
-                databaseReference.child(userId).updateChildren(hashMap);
+                    SharedPreferences sharedPreferences = getSharedPreferences("My-Ref", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("userId", userId);
+                    editor.putString("profile", userId);
+                    editor.putString("userType", "user");
+                    editor.commit();
+                    editor.apply();
+                    startActivity(new Intent(SignUpScreen.this, MainActivity.class));
+                    finish();
+                }
+                else {
+                    HashMap<String, Object> hashMap = new HashMap<>();
+                    hashMap.put("FCM", fcmToken);
+                    hashMap.put("Email", email);
+                    hashMap.put("type", "social");
+                    hashMap.put("userName", profileUrl);
+                    hashMap.put("Name", Name);
 
-                SharedPreferences sharedPreferences = getSharedPreferences("My-Ref",MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("userId",userId);
-                editor.putString("userType","user");
-                editor.commit();
-                editor.apply();
-                startActivity(new Intent(SignUpScreen.this,MainActivity.class));
-                finish();
+                    databaseReference.child(userId).updateChildren(hashMap);
+
+                    SharedPreferences sharedPreferences = getSharedPreferences("My-Ref", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("userId", userId);
+                    editor.putString("userType", "user");
+                    editor.commit();
+                    editor.apply();
+                    startActivity(new Intent(SignUpScreen.this, CompleteProfile.class));
+                    finish();
+                }
 
 
             }

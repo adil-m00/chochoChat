@@ -409,22 +409,40 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String userId = mAuth.getCurrentUser().getUid().toString();
-                HashMap<String,Object> hashMap = new HashMap<>();
-                hashMap.put("FCM",fcmToken);
-                hashMap.put("Email",fcmToken);
-                hashMap.put("type","social");
-                hashMap.put("Name",Name);
+                if(snapshot.child(userId).child("About").exists())
+                {
 
-                databaseReference.child(userId).updateChildren(hashMap);
+                    SharedPreferences sharedPreferences = getSharedPreferences("My-Ref", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("userId", userId);
+                    editor.putString("profile", userId);
+                    editor.putString("userType", "user");
+                    editor.commit();
+                    editor.apply();
+                    startActivity(new Intent(LoginScreen.this, MainActivity.class));
+                    finish();
+                }
+                else {
+                    HashMap<String,Object> hashMap = new HashMap<>();
+                    hashMap.put("FCM",fcmToken);
+                    hashMap.put("Email",email);
+                    hashMap.put("userName", profileUrl);
+                    hashMap.put("type","social");
+                    hashMap.put("Name",Name);
 
-                SharedPreferences sharedPreferences = getSharedPreferences("My-Ref",MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("userId",userId);
-                editor.putString("userType","user");
-                editor.commit();
-                editor.apply();
-                startActivity(new Intent(LoginScreen.this,MainActivity.class));
-                finish();
+                    databaseReference.child(userId).updateChildren(hashMap);
+
+                    SharedPreferences sharedPreferences = getSharedPreferences("My-Ref",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("userId",userId);
+                    editor.putString("userType","user");
+                    editor.commit();
+                    editor.apply();
+                    startActivity(new Intent(LoginScreen.this,CompleteProfile.class));
+                    finish();
+                }
+
+
 
 
             }

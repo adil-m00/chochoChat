@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RandomChat</string>
+    <string name="app_name">Chat App</string>
 
     <string name="termsandCondition"><u>Terms &amp; Conditions</u></string>
 
@@ -11,4 +11,9 @@
     <string name="fb_login_protocol_scheme">fb456520796475919</string>
     <string name="fb_client_tokens">8ca90e6bab0980dd3b36445fbc89b562</string>
 
+    <string-array name="Gender">
+        <item>Please Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 </resources>

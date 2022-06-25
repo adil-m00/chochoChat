@@ -5,61 +5,90 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.nabinbhandari.android.permissions.PermissionHandler;
 import com.nabinbhandari.android.permissions.Permissions;
 
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Locale;
 
 public class CompleteProfile extends AppCompatActivity {
 
-
-    private Spinner gender,country,city,education,smoke,alcohol,lookingFor;
+    private Spinner gender;
     private EditText names,abouts;
-
-    private ArrayList<String> genderLabel = new ArrayList<>();
-    private ArrayList<String> countryLabel = new ArrayList<>();
-    private ArrayList<String> CityLabel = new ArrayList<>();
-    private ArrayList<String> educationLabel = new ArrayList<>();
-    private ArrayList<String> smokeLabel = new ArrayList<>();
-    private ArrayList<String> alcoholLabel = new ArrayList<>();
-    private ArrayList<String> lookingForLabel = new ArrayList<>();
-
-
+    private TextView dateofBirth;
     private ImageView profileImage;
     private ImageView selectImages;
     Uri imageUri;
+    private String Date="";
+    final Calendar myCalendar = Calendar.getInstance();
+    private DatabaseReference databaseReference;
 
+    StorageReference mStorageRef;
+    private String ImageSelect=null;
+    private ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complete_profile);
-
+        progressDialog = new ProgressDialog(this);
+        databaseReference = FirebaseDatabase.getInstance().getReference("Users");
+        dateofBirth = findViewById(R.id.dateofBirth);
         profileImage = findViewById(R.id.profile);
         selectImages = findViewById(R.id.selectImages);
+        mStorageRef = FirebaseStorage.getInstance().getReference();
 
 
         gender = findViewById(R.id.genderSpinner);
-        country = findViewById(R.id.countrySpinner);
-        city = findViewById(R.id.citySpinner);
-        education = findViewById(R.id.educationSpinner);
-        smoke = findViewById(R.id.smokeSpinner);
-        alcohol = findViewById(R.id.alcoholSpinner);
-        lookingFor = findViewById(R.id.lookingFor);
         names = findViewById(R.id.names);
         abouts = findViewById(R.id.abouts);
 
+        DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabel();
+            }
 
+        };
+
+        dateofBirth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(CompleteProfile.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
 
         String[] permissions = {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         Permissions.check(this/*context*/, permissions, null/*rationale*/, null/*options*/, new PermissionHandler() {
@@ -75,94 +104,63 @@ public class CompleteProfile extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-        bindingSpinner();
-
-
+        SharedPreferences sharedPreferences = getSharedPreferences("My-Ref",MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId","");
 
         findViewById(R.id.saveBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String Names = names.getText().toString();
+                String Abouts = abouts.getText().toString();
+                if(Names.isEmpty() || Abouts.isEmpty() || Date == "")
+                {
+                    Toast.makeText(CompleteProfile.this, "all fields required", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else
+                {
+                    progressDialog.setTitle("Please Wait");
+                    progressDialog.setMessage("Profile is updating");
+                    progressDialog.setCanceledOnTouchOutside(false);
+                    progressDialog.show();
 
+                    final StorageReference riversRef = mStorageRef.child("User/_"+System.currentTimeMillis());
+
+                    riversRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            riversRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    progressDialog.dismiss();
+                                    HashMap<String,Object> hashMap = new HashMap<>();
+                                    hashMap.put("Name",Names);
+                                    hashMap.put("About",Abouts);
+                                    hashMap.put("Image",uri.toString());
+                                    hashMap.put("Date",Date);
+                                    hashMap.put("Gender",gender.getSelectedItem().toString());
+                                    databaseReference.child(userId).updateChildren(hashMap);
+                                    Toast.makeText(CompleteProfile.this, "Profile has been updated", Toast.LENGTH_SHORT).show();
+
+                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                    editor.putString("profile",userId);
+                                    editor.commit();
+                                    editor.apply();
+                                    startActivity(new Intent(CompleteProfile.this,MainActivity.class));
+                                    finish();
+                                }
+                            });
+                        }
+                    });
+
+
+
+                }
             }
         });
 
 
 
-    }
-
-
-    public void bindingSpinner()
-    {
-        genderLabel.add("Gender");
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(CompleteProfile.this, R.layout.spinner_text, R.id.tv_promo_txt, genderLabel);
-        // Drop down layout style
-        dataAdapter.setDropDownViewResource(R.layout.spinner_drop_down);
-        // attaching data adapter to spinner
-        gender.setAdapter(dataAdapter);
-
-
-        countryLabel.add("Country");
-        ArrayAdapter<String> dataAdapters = new ArrayAdapter<String>(CompleteProfile.this, R.layout.spinner_text, R.id.tv_promo_txt, countryLabel);
-        // Drop down layout style
-        dataAdapters.setDropDownViewResource(R.layout.spinner_drop_down);
-        // attaching data adapter to spinner
-        country.setAdapter(dataAdapters);
-
-//        city
-
-        CityLabel.add("City");
-        ArrayAdapter<String> dataAdapterC = new ArrayAdapter<String>(CompleteProfile.this, R.layout.spinner_text, R.id.tv_promo_txt, CityLabel);
-        // Drop down layout style
-        dataAdapterC.setDropDownViewResource(R.layout.spinner_drop_down);
-        // attaching data adapter to spinner
-        city.setAdapter(dataAdapterC);
-
-
-
-//Education
-        educationLabel.add("Education");
-        ArrayAdapter<String> dataAdapterE= new ArrayAdapter<String>(CompleteProfile.this, R.layout.spinner_text, R.id.tv_promo_txt, educationLabel);
-        // Drop down layout style
-        dataAdapterE.setDropDownViewResource(R.layout.spinner_drop_down);
-        // attaching data adapter to spinner
-        education.setAdapter(dataAdapterE);
-
-
-
-//        smoke
-
-
-        smokeLabel.add("Smoke");
-        ArrayAdapter<String> dataAdapterS= new ArrayAdapter<String>(CompleteProfile.this, R.layout.spinner_text, R.id.tv_promo_txt, smokeLabel);
-        // Drop down layout style
-        dataAdapterS.setDropDownViewResource(R.layout.spinner_drop_down);
-        // attaching data adapter to spinner
-        smoke.setAdapter(dataAdapterS);
-
-
-
-//        alcohol label
-        alcoholLabel.add("Alcohol");
-        ArrayAdapter<String> dataAdapterA= new ArrayAdapter<String>(CompleteProfile.this, R.layout.spinner_text, R.id.tv_promo_txt, alcoholLabel);
-        // Drop down layout style
-        dataAdapterA.setDropDownViewResource(R.layout.spinner_drop_down);
-        // attaching data adapter to spinner
-        alcohol.setAdapter(dataAdapterA);
-
-
-
-//        looking for
-        lookingForLabel.add("Looking for");
-        ArrayAdapter<String> dataAdapterL= new ArrayAdapter<String>(CompleteProfile.this, R.layout.spinner_text, R.id.tv_promo_txt, lookingForLabel);
-        // Drop down layout style
-        dataAdapterL.setDropDownViewResource(R.layout.spinner_drop_down);
-        // attaching data adapter to spinner
-        lookingFor.setAdapter(dataAdapterL);
     }
 
 
@@ -184,6 +182,12 @@ public class CompleteProfile extends AppCompatActivity {
 
         }
     }
+    private void updateLabel() {
+        String myFormat = "MM/dd/yy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
+        Date = (sdf.format(myCalendar.getTime()));
+        dateofBirth.setText(sdf.format(myCalendar.getTime()));
+    }
 
 }

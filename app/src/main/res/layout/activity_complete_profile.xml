@@ -112,6 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
                 android:gravity="center"
+                android:id="@+id/dateofBirth"
                 android:textColor="@color/black"
                 android:background="@drawable/tf"
                 android:paddingLeft="@dimen/_10sdp"
@@ -142,101 +143,23 @@
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
+                android:entries="@array/Gender"
                 android:id="@+id/genderSpinner"
                 android:paddingLeft="@dimen/_10sdp"
-                android:backgroundTint="@color/spinnerColor"/>
+                android:backgroundTint="@color/black"/>
 
 
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:background="@drawable/tf">
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:id="@+id/countrySpinner"
-                android:paddingLeft="@dimen/_10sdp"
-                android:backgroundTint="@color/spinnerColor"/>
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:background="@drawable/tf">
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:paddingLeft="@dimen/_10sdp"
-                android:backgroundTint="@color/spinnerColor"
-                android:id="@+id/citySpinner"/>
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:background="@drawable/tf">
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:paddingLeft="@dimen/_10sdp"
-                android:backgroundTint="@color/spinnerColor"
-                android:id="@+id/educationSpinner"/>
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:background="@drawable/tf">
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:paddingLeft="@dimen/_10sdp"
-                android:backgroundTint="@color/spinnerColor"
-                android:id="@+id/smokeSpinner"/>
-            </LinearLayout>
 
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:background="@drawable/tf">
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:id="@+id/alcoholSpinner"
-                android:paddingLeft="@dimen/_10sdp"
-                android:backgroundTint="@color/spinnerColor"/>
-
-            </LinearLayout>
 
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:background="@drawable/tf">
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:id="@+id/lookingFor"
-                android:paddingLeft="@dimen/_10sdp"
-                android:backgroundTint="@color/spinnerColor"/>
 
-            </LinearLayout>
+
 
 
             <ImageView
