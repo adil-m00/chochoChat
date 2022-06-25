@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import com.chochoChat.Fragment.ChatFragment;
 import com.chochoChat.Fragment.HomeFragment;
 import com.chochoChat.Fragment.ProfileFragment;
+import com.chochoChat.Fragment.SettingFragment;
+import com.chochoChat.Fragment.YourChat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
     public void profileFragments()
     {
         final Fragment fragment;
-        fragment = new ProfileFragment();
+        fragment = new SettingFragment();
         loadFragment(fragment);
     }
     public void chatFragment()
     {
         final Fragment fragment;
-        fragment = new ChatFragment();
+        fragment = new YourChat();
         loadFragment(fragment);
     }
 

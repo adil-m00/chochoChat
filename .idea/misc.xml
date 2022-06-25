@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/messages_center.xml" value="0.1525" />
+        <entry key="app/src/main/res/drawable/receiver_message_box.xml" value="0.114" />
+        <entry key="app/src/main/res/drawable/sender_message_box.xml" value="0.114" />
         <entry key="app/src/main/res/layout/activity_avatars.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_chooser.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_chooser_search.xml" value="0.19610507246376813" />
@@ -18,8 +21,16 @@
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.10260416666666666" />
         <entry key="app/src/main/res/layout/activity_terms_and_conditions.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_setting.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_your_chat.xml" value="0.10260416666666666" />
+        <entry key="app/src/main/res/layout/my_image_model.xml" value="0.10260416666666666" />
+        <entry key="app/src/main/res/layout/my_text_model.xml" value="0.10260416666666666" />
+        <entry key="app/src/main/res/layout/other_user_image_model.xml" value="0.10260416666666666" />
+        <entry key="app/src/main/res/layout/other_user_text_model.xml" value="0.10260416666666666" />
         <entry key="app/src/main/res/layout/search_adapter.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/spinner_drop_down.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/your_chat_adapter.xml" value="0.19610507246376813" />
       </map>
     </option>
   </component>

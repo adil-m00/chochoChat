@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp">
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:text="I am fine you say how are you too .."
+        android:background="@drawable/sender_message_box"
+        android:textSize="@dimen/_12sdp"
+        android:minWidth="@dimen/_100sdp"
+        android:maxWidth="@dimen/_180sdp"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:id="@+id/senderText"/>
+
+
+
+
+
+</RelativeLayout>

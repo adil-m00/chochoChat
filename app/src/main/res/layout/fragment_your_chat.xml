@@ -7,19 +7,19 @@
     tools:context="com.chochoChat.Fragment.YourChat">
 
     <EditText
+        android:id="@+id/searchHere"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginLeft="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/searchbar"
+        android:drawableLeft="@drawable/search_icon"
+        android:drawablePadding="@dimen/_8sdp"
+        android:hint="Search Here"
         android:paddingLeft="@dimen/_10sdp"
         android:paddingTop="@dimen/_10sdp"
-        android:paddingBottom="@dimen/_10sdp"
-        android:id="@+id/searchHere"
-        android:hint="Search Here"
-        android:drawablePadding="@dimen/_8sdp"
-        android:drawableLeft="@drawable/search_icon"
-        android:background="@drawable/searchbar"/>
+        android:paddingBottom="@dimen/_10sdp" />
 
 
     <RelativeLayout

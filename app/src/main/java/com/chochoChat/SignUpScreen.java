@@ -385,6 +385,11 @@ public class SignUpScreen extends AppCompatActivity {
                 if(snapshot.child(userId).child("About").exists())
                 {
 
+                    HashMap<String, Object> hashMap = new HashMap<>();
+                    hashMap.put("FCM", fcmToken);
+                    hashMap.put("status","Online");
+
+                    databaseReference.child(userId).updateChildren(hashMap);
                     SharedPreferences sharedPreferences = getSharedPreferences("My-Ref", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("userId", userId);
@@ -401,6 +406,7 @@ public class SignUpScreen extends AppCompatActivity {
                     hashMap.put("Email", email);
                     hashMap.put("type", "social");
                     hashMap.put("userName", profileUrl);
+                    hashMap.put("status","Online");
                     hashMap.put("Name", Name);
 
                     databaseReference.child(userId).updateChildren(hashMap);

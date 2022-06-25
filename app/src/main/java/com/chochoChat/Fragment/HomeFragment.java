@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.chochoChat.ChooserSearch;
+import com.chochoChat.InboxChat;
 import com.chochoChat.MainActivity;
 import com.chochoChat.Modal.UserModal;
 import com.chochoChat.SplashScreen;
@@ -139,6 +140,14 @@ public class HomeFragment extends Fragment {
 
             }
 
+            viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), InboxChat.class);
+                    intent.putExtra("userId",userModal.getUserId());
+                    startActivity(intent);
+                }
+            });
         }
         @Override
         public int getItemCount() {
