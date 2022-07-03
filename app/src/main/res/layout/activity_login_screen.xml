@@ -235,7 +235,7 @@
                    android:layout_marginTop="20dp"
                    android:layout_marginBottom="@dimen/_20sdp"
                    android:text="I agree to"
-                   android:textColor="@color/black"
+                   android:textColor="@color/white"
                    android:textSize="10dp"
                    app:layout_constraintBottom_toBottomOf="parent"
                    app:layout_constraintStart_toEndOf="@+id/imageView11" />
@@ -249,7 +249,7 @@
                    android:layout_marginTop="20dp"
                    android:layout_marginBottom="@dimen/_20sdp"
                    android:text="@string/termsandCondition"
-                   android:textColor="@color/black"
+                   android:textColor="@color/white"
                    android:textSize="10dp"
                    app:layout_constraintBottom_toBottomOf="parent"
                    app:layout_constraintStart_toEndOf="@+id/textView" />
@@ -263,7 +263,7 @@
                    android:layout_marginTop="20dp"
                    android:layout_marginBottom="@dimen/_20sdp"
                    android:text="and"
-                   android:textColor="@color/black"
+                   android:textColor="@color/white"
                    android:textSize="10dp"
                    app:layout_constraintBottom_toBottomOf="parent"
                    app:layout_constraintStart_toEndOf="@+id/textView2" />
@@ -278,7 +278,7 @@
                    android:layout_marginTop="20dp"
                    android:layout_marginBottom="@dimen/_20sdp"
                    android:text="@string/privacyPolicy"
-                   android:textColor="@color/black"
+                   android:textColor="@color/white"
                    android:textSize="10dp"
                    app:layout_constraintBottom_toBottomOf="parent"
                    app:layout_constraintStart_toEndOf="@+id/textView3" />

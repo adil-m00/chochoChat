@@ -10,8 +10,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.chochoChat.Fragment.ChatFragment;
 import com.chochoChat.Fragment.HomeFragment;
@@ -25,7 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
     public static ConstraintLayout constraints;
     public static ImageView close,searchBtn;
-    private ImageView chatIcons,homeIcon,profileFragment;
+    private ImageView chatIcons,homeIcon,profileFragment,groupIcon;
+
+    public static RelativeLayout groupPopup;
+    private EditText groupNames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,20 +38,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         close = findViewById(R.id.close);
-
+        groupNames = findViewById(R.id.groupNames);
+        groupPopup = findViewById(R.id.groupPopup);
         frameLayout = findViewById(R.id.framlayout);
         constraints = findViewById(R.id.constraints);
+        groupIcon = findViewById(R.id.groupIcon);
         searchBtn = findViewById(R.id.searchBtn);
 
         homeIcon = findViewById(R.id.homeIcons);
         chatIcons = findViewById(R.id.chatIcons);
         profileFragment = findViewById(R.id.profileFragment);
 
+
+        findViewById(R.id.closeImage).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                groupPopup.setVisibility(View.GONE);
+            }
+        });
+
         chatIcons.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                chatIcons.setImageDrawable(getResources().getDrawable(R.drawable.chat_icon_sel));
-                profileFragment.setImageDrawable(getResources().getDrawable(R.drawable.profile_icon_unsel));
+                homeIcon.setColorFilter(getResources().getColor(R.color.black));
+                chatIcons.setColorFilter(getResources().getColor(R.color.purple_200));
+                profileFragment.setColorFilter(getResources().getColor(R.color.black));
+                groupIcon.setColorFilter(getResources().getColor(R.color.black));
                 chatFragment();
             }
         });
@@ -55,16 +72,30 @@ public class MainActivity extends AppCompatActivity {
         homeIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                chatIcons.setImageDrawable(getResources().getDrawable(R.drawable.chat_icon_unsel));
-                profileFragment.setImageDrawable(getResources().getDrawable(R.drawable.profile_icon_unsel));
+                homeIcon.setColorFilter(getResources().getColor(R.color.purple_200));
+                chatIcons.setColorFilter(getResources().getColor(R.color.black));
+                profileFragment.setColorFilter(getResources().getColor(R.color.black));
+                groupIcon.setColorFilter(getResources().getColor(R.color.black));
                 homeFragment();
             }
         });
         profileFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                chatIcons.setImageDrawable(getResources().getDrawable(R.drawable.chat_icon_unsel));
-                profileFragment.setImageDrawable(getResources().getDrawable(R.drawable.profile_icon_sel));
+                homeIcon.setColorFilter(getResources().getColor(R.color.black));
+                chatIcons.setColorFilter(getResources().getColor(R.color.black));
+                profileFragment.setColorFilter(getResources().getColor(R.color.purple_200));
+                groupIcon.setColorFilter(getResources().getColor(R.color.black));
+                profileFragments();
+            }
+        });
+        groupIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                homeIcon.setColorFilter(getResources().getColor(R.color.black));
+                chatIcons.setColorFilter(getResources().getColor(R.color.black));
+                profileFragment.setColorFilter(getResources().getColor(R.color.black));
+                groupIcon.setColorFilter(getResources().getColor(R.color.purple_200));
                 profileFragments();
             }
         });

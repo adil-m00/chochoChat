@@ -55,12 +55,7 @@ public class Settings extends AppCompatActivity {
         });
 
 
-        findViewById(R.id.subscriptionPlan).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Settings.this,SubscriptionPlan.class));
-            }
-        });
+
 
     }
 }

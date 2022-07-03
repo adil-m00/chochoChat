@@ -1,11 +1,8 @@
 package com.chochoChat.Fragment;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -21,11 +18,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.chochoChat.ChooserSearch;
 import com.chochoChat.InboxChat;
-import com.chochoChat.MainActivity;
 import com.chochoChat.Modal.UserModal;
-import com.chochoChat.SplashScreen;
 import com.chochoChat.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,7 +28,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class HomeFragment extends Fragment {
 

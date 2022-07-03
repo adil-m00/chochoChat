@@ -20,24 +20,25 @@
         app:layout_constraintVertical_bias="0.496">
 
 
-
         <ImageView
+            android:id="@+id/completeProfile"
             android:layout_width="@dimen/_150sdp"
             android:layout_height="@dimen/_33sdp"
+            app:tint="@color/white"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:id="@+id/completeProfile"
             android:layout_marginTop="@dimen/_20sdp"
-            android:src="@drawable/complete_profile"/>
+            android:src="@drawable/complete_profile" />
 
 
         <ImageView
+            android:id="@+id/deatils"
+            app:tint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_33sdp"
             android:layout_below="@+id/completeProfile"
             android:layout_marginLeft="@dimen/_20sdp"
             android:scaleType="fitStart"
-            android:id="@+id/deatils"
-            android:src="@drawable/please_enter_detail_below"/>
+            android:src="@drawable/please_enter_detail_below" />
 
 
 

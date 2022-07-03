@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,41 +14,56 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RandomChat"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Settings"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".PrivacyPolicy"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".TermsAndConditions"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SubscriptionPlan"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".NeedHelp"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".EditProfile"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".InboxChat"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SearchResult"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ChooserSearch"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".CompleteProfile"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".NewPassword"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".VerificationCode"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ForgotPassword"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LoginScreen"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SignUpScreen"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LoginSignup"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SplashScreen"
+        <activity
+            android:name=".MemberActivitySpecific"
+            android:exported="false" />
+        <activity
+            android:name=".Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PrivacyPolicy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TermsAndConditions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NeedHelp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InboxChat"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompleteProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VerificationCode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgotPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUpScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginSignup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashScreen"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

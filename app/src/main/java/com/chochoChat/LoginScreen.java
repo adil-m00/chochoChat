@@ -161,8 +161,7 @@ public class LoginScreen extends AppCompatActivity {
                                             hashMap.put("FCM",fcmToken);
 
                                             databaseReference.child(userId).updateChildren(hashMap);
-                                            if(dataSnapshot.child("userType").getValue().equals("User"))
-                                            {
+
                                                 SharedPreferences sharedPreferences = getSharedPreferences("My-Ref",MODE_PRIVATE);
                                                 SharedPreferences.Editor editor = sharedPreferences.edit();
                                                 editor.putString("userId",userId);
@@ -171,18 +170,7 @@ public class LoginScreen extends AppCompatActivity {
                                                 editor.apply();
                                                 startActivity(new Intent(LoginScreen.this,MainActivity.class));
                                                 finish();
-                                            }
-                                            else
-                                            {
-                                                SharedPreferences sharedPreferences = getSharedPreferences("My-Ref",MODE_PRIVATE);
-                                                SharedPreferences.Editor editor = sharedPreferences.edit();
-                                                editor.putString("userId",userId);
-                                                editor.putString("userType","company");
-                                                editor.commit();
-                                                editor.apply();
-                                                startActivity(new Intent(LoginScreen.this,MainActivity.class));
-                                                finish();
-                                            }
+
                                         }
                                     }
 

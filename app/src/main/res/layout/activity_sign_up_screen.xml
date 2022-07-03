@@ -40,6 +40,7 @@
         <ImageView
             android:id="@+id/signUp"
             android:layout_width="wrap_content"
+            app:tint="@color/white"
             android:layout_height="@dimen/_20sdp"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
@@ -53,6 +54,7 @@
 
         <ImageView
             android:id="@+id/imageView3"
+            app:tint="@color/white"
             android:layout_width="150dp"
             android:layout_height="@dimen/_18sdp"
             android:layout_marginStart="24dp"
@@ -205,6 +207,7 @@
             android:layout_height="@dimen/_18sdp"
             android:layout_marginTop="12dp"
             android:src="@drawable/or"
+            app:tint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.565"
             app:layout_constraintStart_toStartOf="parent"
@@ -277,7 +280,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:text="I agree to"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageView11" />
@@ -291,7 +294,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:text="@string/termsandCondition"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView" />
@@ -305,7 +308,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:text="and"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView2" />
@@ -320,7 +323,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:text="@string/privacyPolicy"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView3" />

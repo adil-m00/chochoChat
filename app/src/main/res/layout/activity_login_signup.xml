@@ -39,27 +39,27 @@
 
             <TextView
                 android:id="@+id/random_text"
-                android:text="Chat App"
                 android:layout_width="@dimen/_200sdp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_20sdp"
-                android:textStyle="bold"
-                android:gravity="center"
                 android:layout_below="@+id/logo"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:src="@drawable/random_chat_app" />
+                android:gravity="center"
+                android:src="@drawable/random_chat_app"
+                android:text="Chat App"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/chat_icon"
                 android:layout_width="@dimen/_180sdp"
                 android:layout_height="@dimen/_180sdp"
-                android:padding="@dimen/_20sdp"
                 android:layout_below="@+id/random_text"
-                app:tint="@color/purple_700"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/chat_icon" />
+                android:padding="@dimen/_20sdp"
+                android:src="@drawable/chat_icon"
+                app:tint="@color/purple_700" />
 
 
             <ImageView
