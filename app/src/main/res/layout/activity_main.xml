@@ -23,18 +23,6 @@
         android:background="@drawable/bottom_bar_bg"
         android:layout_height="@dimen/_50sdp">
 
-
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_20sdp"
-            android:layout_weight="1"
-            android:id="@+id/chatIcons"
-            android:layout_gravity="center"
-            android:src="@drawable/chat_icon_unnsel"
-            app:tint="@color/black"/>
-
-
         <ImageView
             android:layout_width="0dp"
             android:layout_height="@dimen/_20sdp"
@@ -44,12 +32,24 @@
             android:layout_gravity="center"
             android:src="@drawable/home_icons"/>
 
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_weight="1"
+            android:id="@+id/chatIcons"
+            android:layout_gravity="center"
+            android:src="@drawable/chat_icon_unnsel"
+            app:tint="@color/white"/>
+
+
+
+
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="@dimen/_20sdp"
             android:layout_weight="1"
-            app:tint="@color/black"
+            app:tint="@color/white"
             android:layout_gravity="center"
             android:id="@+id/groupIcon"
             android:src="@drawable/group_unsel"/>
@@ -58,7 +58,7 @@
                     android:layout_width="0dp"
                     android:layout_height="@dimen/_20sdp"
                     android:layout_weight="1"
-                    app:tint="@color/black"
+                    app:tint="@color/white"
                     android:layout_gravity="center"
                     android:id="@+id/profileFragment"
                     android:src="@drawable/profile_icon_unsel"/>
@@ -82,7 +82,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/black"
+            android:background="@color/white"
             android:alpha="0.5"/>
 
         <ImageView
@@ -100,45 +100,51 @@
             app:cardCornerRadius="@dimen/_10sdp"
             android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="@dimen/_16sdp"
-                    android:textStyle="bold"
-                    android:textColor="@color/purple_500"
-                    android:text="Group"/>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_40sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_10sdp">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:layout_height="wrap_content">
 
-                    <EditText
-                        android:id="@+id/groupNames"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40sdp"
-                        android:background="@drawable/tf"
-                        android:hint="Enter Group Name"
-                        android:paddingLeft="@dimen/_45sdp"
-                        android:textColor="@color/black" />
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:textSize="@dimen/_16sdp"
+                   android:textStyle="bold"
+                   android:textColor="@color/purple_500"
+                   android:text="Group"/>
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/_40sdp"
+                   android:layout_marginTop="@dimen/_20sdp"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:layout_marginRight="@dimen/_10sdp">
+
+                   <EditText
+                       android:id="@+id/groupNames"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/_40sdp"
+                       android:background="@drawable/tf"
+                       android:hint="Enter Group Name"
+                       android:paddingLeft="@dimen/_15sdp"
+                       android:textColor="@color/black" />
 
 
-                </RelativeLayout>
+               </RelativeLayout>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/doneBtns"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:src="@drawable/done_btn"/>
-            </LinearLayout>
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/doneBtns"
+                   android:layout_gravity="center"
+                   android:layout_margin="@dimen/_10sdp"
+                   android:src="@drawable/done_btn"/>
+           </LinearLayout>
+       </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 

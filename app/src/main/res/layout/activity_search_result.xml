@@ -77,7 +77,7 @@
             android:id="@+id/respondant1"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_30sdp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
 
         <ImageView
             android:id="@+id/peterImage"
@@ -118,7 +118,7 @@
             android:id="@+id/respondant2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_30sdp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
 
         <ImageView
             android:id="@+id/peterImag2"
@@ -159,7 +159,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_30sdp"
             android:text="Respondent 1"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold" />
 
         <ImageView

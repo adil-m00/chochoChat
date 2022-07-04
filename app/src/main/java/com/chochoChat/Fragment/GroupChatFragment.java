@@ -27,6 +27,8 @@ import com.chochoChat.MainActivity;
 import com.chochoChat.MemberActivitySpecific;
 import com.chochoChat.Modal.GroupChatModal;
 import com.chochoChat.R;
+import com.chochoChat.SplashScreen;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -113,7 +115,12 @@ public class GroupChatFragment extends Fragment {
 
             }
         });
-
+        view.findViewById(R.id.logout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logout();
+            }
+        });
     }
     public void getGroupChating(String userIDS)
     {
@@ -296,5 +303,38 @@ public class GroupChatFragment extends Fragment {
             return position;
         }
     }
+    public void logout()
+    {
+        androidx.appcompat.app.AlertDialog.Builder builder1 = new androidx.appcompat.app.AlertDialog.Builder(getActivity());
+        builder1.setMessage("Are you sure to logout?");
+        builder1.setCancelable(true);
 
+        builder1.setPositiveButton(
+                "Yes",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        FirebaseAuth.getInstance().signOut();
+                        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("My-Ref", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("userId",null);
+                        editor.putString("profile",null);
+
+                        editor.commit();
+                        editor.apply();
+                        startActivity(new Intent(getActivity(), SplashScreen.class));
+                        getActivity().finish();
+                    }
+                });
+
+        builder1.setNegativeButton(
+                "No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        androidx.appcompat.app.AlertDialog alert11 = builder1.create();
+        alert11.show();
+    }
 }

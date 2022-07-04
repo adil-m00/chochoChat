@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_35sdp"
         android:layout_marginTop="16dp"
+        app:tint="@color/white"
         android:src="@drawable/home_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -28,7 +29,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"/>
 
 
     <androidx.recyclerview.widget.RecyclerView

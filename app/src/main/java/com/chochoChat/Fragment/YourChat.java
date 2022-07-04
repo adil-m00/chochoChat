@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -29,6 +30,7 @@ import com.chochoChat.Adapter.AvatarModal;
 import com.chochoChat.InboxChat;
 import com.chochoChat.Modal.ChatFragmentModal;
 import com.chochoChat.R;
+import com.chochoChat.SplashScreen;
 import com.github.marlonlom.utilities.timeago.TimeAgo;
 import com.github.marlonlom.utilities.timeago.TimeAgoMessages;
 import com.google.firebase.auth.FirebaseAuth;
@@ -133,6 +135,13 @@ public class YourChat extends Fragment {
             return false;
         }
     });
+
+        view.findViewById(R.id.logout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logout();
+            }
+        });
 }
 
     @Override
@@ -415,4 +424,38 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 //            return position;
 //        }
 //    }
+public void logout()
+{
+    AlertDialog.Builder builder1 = new AlertDialog.Builder(getActivity());
+    builder1.setMessage("Are you sure to logout?");
+    builder1.setCancelable(true);
+
+    builder1.setPositiveButton(
+            "Yes",
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    FirebaseAuth.getInstance().signOut();
+                    SharedPreferences sharedPreferences = getActivity().getSharedPreferences("My-Ref", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("userId",null);
+                    editor.putString("profile",null);
+
+                    editor.commit();
+                    editor.apply();
+                    startActivity(new Intent(getActivity(), SplashScreen.class));
+                    getActivity().finish();
+                }
+            });
+
+    builder1.setNegativeButton(
+            "No",
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.cancel();
+                }
+            });
+
+    AlertDialog alert11 = builder1.create();
+    alert11.show();
+}
 }

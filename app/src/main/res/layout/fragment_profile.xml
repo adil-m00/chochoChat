@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:text="John Doe"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginLeft="@dimen/_5sdp"
             android:textSize="@dimen/_16sdp"/>
@@ -95,7 +95,7 @@
                 android:layout_toRightOf="@+id/location"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:text="Location here, City, Country"/>
         </RelativeLayout>
 
@@ -120,7 +120,7 @@
                 android:layout_toRightOf="@+id/education"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:text="High School"/>
         </RelativeLayout>
 
@@ -145,7 +145,7 @@
                 android:layout_toRightOf="@+id/looking"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:text="Looking for long-term relationship"/>
         </RelativeLayout>
 
@@ -170,7 +170,7 @@
                 android:layout_toRightOf="@+id/alcohol"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:text="Looking for long-term relationship"/>
         </RelativeLayout>
 
@@ -195,7 +195,7 @@
                 android:layout_toRightOf="@+id/smoke"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:text="Sometimes"/>
         </RelativeLayout>
 
@@ -221,7 +221,7 @@
                 android:layout_toRightOf="@+id/abouts"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:id="@+id/about"
                 android:text="About"/>
 
@@ -232,7 +232,7 @@
                 android:layout_toRightOf="@+id/abouts"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:layout_below="@+id/about"
                 android:text="Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "/>
         </RelativeLayout>

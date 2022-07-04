@@ -14,6 +14,6 @@
     <color name="radioSelectorColor">#B1B4E0</color>
 
     <color name="popupTextColor">#494E5E</color>
-
+    <color name="linkColor">#0000EE</color>
 
 </resources>

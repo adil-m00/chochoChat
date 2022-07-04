@@ -6,12 +6,20 @@ public class MyMessageModelImage {
     String receiverId;
     String status;
     String timestamp;
+    String userName;
 
 
+    public String getUserName() {
+        return userName;
+    }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public MyMessageModelImage() {
     }
+
 
 
 

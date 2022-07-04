@@ -114,7 +114,7 @@
                 android:layout_height="@dimen/_35sdp"
                 android:gravity="center"
                 android:id="@+id/dateofBirth"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:background="@drawable/tf"
                 android:paddingLeft="@dimen/_10sdp"
                 android:text="Date of Birth"
@@ -147,7 +147,7 @@
                 android:entries="@array/Gender"
                 android:id="@+id/genderSpinner"
                 android:paddingLeft="@dimen/_10sdp"
-                android:backgroundTint="@color/black"/>
+                android:backgroundTint="@color/white"/>
 
 
             </LinearLayout>

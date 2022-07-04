@@ -6,7 +6,18 @@ public class OtherMessageModelImage {
     String receiverId;
     String status;
     String timestamp;
+    String userProfileImage;
 
+    String userName;
+
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
 
 
@@ -14,7 +25,13 @@ public class OtherMessageModelImage {
     }
 
 
+    public String getUserProfileImage() {
+        return userProfileImage;
+    }
 
+    public void setUserProfileImage(String userProfileImage) {
+        this.userProfileImage = userProfileImage;
+    }
     public String getMessage() {
         return message;
     }

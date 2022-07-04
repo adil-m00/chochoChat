@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:text="Chat"
             android:textSize="10dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_gravity="center"/>
     </LinearLayout>
 
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:text="Remove Match"
             android:textSize="10dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_gravity="center"/>
     </LinearLayout>
 </RelativeLayout>

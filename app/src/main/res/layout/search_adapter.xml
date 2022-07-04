@@ -39,7 +39,7 @@
             android:id="@+id/Name"
             android:textSize="@dimen/_15sdp"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_10sdp"
             android:gravity="center"

@@ -17,12 +17,14 @@
         <entry key="app/src/main/res/layout/activity_login_screen.xml" value="0.11220871327254306" />
         <entry key="app/src/main/res/layout/activity_login_signup.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_member_specific.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_need_help.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_search_screen.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_sign_up_screen.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_terms_and_conditions.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/fragment_group_chat.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.19610507246376813" />
@@ -33,6 +35,7 @@
         <entry key="app/src/main/res/layout/my_text_model.xml" value="0.10260416666666666" />
         <entry key="app/src/main/res/layout/other_user_image_model.xml" value="0.10260416666666666" />
         <entry key="app/src/main/res/layout/other_user_text_model.xml" value="0.10260416666666666" />
+        <entry key="app/src/main/res/layout/rate_us_dialog.xml" value="0.10260416666666666" />
         <entry key="app/src/main/res/layout/search_adapter.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/spinner_drop_down.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/your_chat_adapter.xml" value="0.19610507246376813" />
